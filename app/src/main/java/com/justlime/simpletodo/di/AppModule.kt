@@ -12,6 +12,13 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+/**
+ * - Module: Marks this object as a Dagger module that provides dependencies.
+ * - InstallIn: Specifies the component in which the module will be installed.
+ * - Provides: Marks a method inside a Dagger module as a provider of dependencies. which we used with inject in constructor.
+ * - Singleton: Ensures that only a single instance of the dependency is created and reused.
+ * - ApplicationContext: Provides the application context for dependency injection.
+ * @return: Returns the AppDatabase instance.*/
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
